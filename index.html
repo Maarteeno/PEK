@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEK Deco Eventos - Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #161b22;
+            --text-main: #ffffff;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --pek-gold: #D4AF37;
+            --whatsapp-green: #25D366;
+            --whatsapp-hover: #128c7e;
+            --instagram-gradient: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-img {
+            max-width: 160px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid var(--pek-gold);
+            padding: 4px;
+            background-color: #000;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 0;
+            font-weight: 700;
+            color: var(--pek-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--pek-gold);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .info-row { display: flex; align-items: center; gap: 12px; }
+        
+        .icon-box {
+            width: 38px; height: 38px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 10px; background: #21262d; font-size: 18px;
+        }
+
+        .card-title { font-weight: 700; font-size: 16px; display: block; }
+        .card-sub { font-size: 12px; color: var(--text-muted); font-weight: normal; }
+
+        .badge {
+            padding: 4px 10px; border-radius: 20px;
+            font-size: 11px; font-weight: 700; color: #000;
+        }
+        
+        .badge-gold { background-color: var(--pek-gold); }
+        .badge-insta { background: var(--text-main); color: #000; }
+
+        .btn-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-whatsapp { background-color: var(--whatsapp-green); }
+        .btn-whatsapp:hover { background-color: var(--whatsapp-hover); }
+
+        .btn-instagram { background: var(--instagram-gradient); }
+        .btn-instagram:hover { opacity: 0.9; }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 15px; /* Espacio para la frase */
+        }
+
+        .service-tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--pek-gold);
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Estilo para la frase recuperada */
+        .phrase-text {
+            font-size: 13px; 
+            color: var(--text-muted); 
+            text-align: center;
+            font-style: italic;
+            border-top: 1px dashed rgba(48, 54, 61, 0.5);
+            padding-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid rgba(48, 54, 61, 0.5);
+            padding-top: 20px;
+            color: var(--text-muted);
+            font-size: 12px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Logo PEK Eventos" class="logo-img">
+            <h1>PEK Deco Eventos</h1>
+            <div class="subtitle">Decoración Integral & Insumos</div>
+        </header>
+
+        <div class="card-grid">
+            
+            <div class="card">
+                <div class="services-list">
+                    <span class="service-tag"><i class="fa-solid fa-champagne-glasses"></i> Fiestas</span>
+                    <span class="service-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Decoración</span>
+                    <span class="service-tag"><i class="fa-solid fa-cake-candles"></i> Cumpleaños</span>
+                    <span class="service-tag"><i class="fa-solid fa-calendar-check"></i> Eventos</span>
+                    <span class="service-tag"><i class="fa-solid fa-box-open"></i> Insumos</span>
+                </div>
+                <div class="phrase-text">
+                    "Hacemos realidad tu celebración soñada."
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="info-row">
+                        <div class="icon-box" style="color: var(--whatsapp-green);">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <span class="card-title">WhatsApp</span>
+                            <span class="card-sub">Contacto Directo</span>
+                        </div>
+                    </div>
+                    <span class="badge badge-gold">Respuesta Rápida</span>
+                </div>
+
+                <a href="https://wa.me/59894165139" target="_blank" class="btn-action btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> Enviar Mensaje
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="info-row">
+                        <div class="icon-box" style="background: var(--instagram-gradient); color: white;">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <span class="card-title">Instagram</span>
+                            <span class="card-sub">@veroirubn</span>
+                        </div>
+                    </div>
+                    <span class="badge badge-insta"><i class="fa-solid fa-users"></i> +1.5k</span>
+                </div>
+
+                <div style="margin-bottom: 15px; color: var(--text-muted); font-size: 13px;">
+                    Mira nuestros últimos trabajos en nuestro perfil.
+                </div>
+
+                <a href="https://www.instagram.com/veroirubn/" target="_blank" class="btn-action btn-instagram">
+                    <i class="fa-brands fa-instagram"></i> Seguir
+                </a>
+            </div>
+
+        </div>
+
+        <footer>
+            © PEK Deco Eventos 2025
+        </footer>
+
+    </div>
+
+</body>
+</html>
